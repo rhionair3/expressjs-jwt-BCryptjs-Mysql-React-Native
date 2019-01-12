@@ -1,5 +1,5 @@
-model.exports = (sequelize, Sequelize) => {
-    const Aturan = Sequelize.define('aturans', {
+module.exports = (sequelize, Sequelize) => {
+    const Aturan = sequelize.define('aturans', {
         id: {
             type : Sequelize.INTEGER,
             primaryKey : true

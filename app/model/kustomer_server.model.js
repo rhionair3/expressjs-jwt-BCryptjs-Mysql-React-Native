@@ -1,9 +1,12 @@
 module.exports = (sequelize, Sequelize) => {
-    const Kustomer_server = Sequelize.define('Kustomer_server', {
+    const Kustomer_server = sequelize.define('Kustomer_server', {
         uuid: {
             type : Sequelize.UUID,
             defaultValue : Sequelize.UUIDV1,
             primaryKey : true
+        },
+        kustUUID: {
+            type : Sequelize.UUID
         },
         nama: {
             type : Sequelize.STRING

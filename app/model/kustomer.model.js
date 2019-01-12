@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const Kustomer = Sequelize.define('Kustomer', {
+    const Kustomer = sequelize.define('Kustomer', {
         uuid: {
             type : Sequelize.UUID,
             defaultValue : Sequelize.UUIDV1,
@@ -20,10 +20,10 @@ module.exports = (sequelize, Sequelize) => {
         logo : {
             type : Sequelize.BLOB
         },
-        createAt : {
+        createdAt : {
             type : Sequelize.DATE
         },
-        updateAt : {
+        updatedAt : {
             type : Sequelize.DATE
         },
         status: {

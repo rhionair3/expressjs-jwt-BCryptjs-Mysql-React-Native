@@ -24,7 +24,7 @@ exports.registrasi = (req, res) => {
         Aturan.findAll({
             where : {
                 nama : {
-                    [Op.or]: req.body.aturan
+                    [Op.or]: ["ADMIN"]
                 }
             }
         }).then(aturans => {

@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const Pengguna = Sequelize.define('penggunas', {
+    const Pengguna = sequelize.define('penggunas', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -17,17 +17,20 @@ module.exports = (sequelize, Sequelize) => {
         password: {
             type: Sequelize.STRING
         },
-        createAt : {
+        createdAt : {
             type : Sequelize.DATE
         },
-        updateAt : {
+        updatedAt : {
             type : Sequelize.DATE
+        },
+        aturanPengguna : {
+            type: Sequelize.ENUM('USER', 'ADMIN', 'PM')
         },
         status: {
             type: Sequelize.ENUM('ACTIVE', 'INACTIVE')
         },
         registrasi: {
-            type: Sequelize.INTEGER('REGISTERED', 'UNREGISTERED')
+            type: Sequelize.ENUM('REGISTERED', 'UNREGISTERED')
         }
     });
 
